@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Curriculum Vitae</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f2f5f6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #dfdfe3;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* En-tête avec photo */
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+        }
+        
+        .photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3498db;
+            margin-right: 30px;
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 0.9em;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        /* Expérience et formation */
+        .item {
+            margin-bottom: 20px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .item-date {
+            color: #7f8c8d;
+        }
+        
+        .item-subtitle {
+            font-style: italic;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        /* Compétences */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .skill {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 3px;
+        }
+        
+        /* Pied de page */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #45a9b0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<script>
+    // Fonction pour rendre le CV responsive
+    function makeCVResponsive() {
+        const container = document.querySelector('.container');
+        const photo = document.querySelector('.photo');
+        const header = document.querySelector('header');
+        
+        function adjustLayout() {
+            const windowWidth = window.innerWidth;
+            
+            if (windowWidth < 768) {
+                // Mode mobile
+                container.style.width = '95%';
+                container.style.padding = '15px';
+                
+                // Changement de disposition du header
+                header.style.flexDirection = 'column';
+                header.style.alignItems = 'center';
+                header.style.textAlign = 'center';
+                
+                photo.style.marginRight = '0';
+                photo.style.marginBottom = '20px';
+                
+                // Ajustement des polices
+                document.body.style.fontSize = '14px';
+                h1.style.fontSize = '24px';
+                
+            } else if (windowWidth >= 768 && windowWidth < 1024) {
+                // Mode tablette
+                container.style.width = '85%';
+                container.style.padding = '20px';
+                
+                header.style.flexDirection = 'row';
+                header.style.textAlign = 'left';
+                photo.style.marginRight = '20px';
+                photo.style.marginBottom = '0';
+                
+                document.body.style.fontSize = '16px';
+                h1.style.fontSize = '28px';
+                
+            } else {
+                // Mode desktop
+                container.style.width = '800px';
+                container.style.padding = '30px';
+                
+                header.style.flexDirection = 'row';
+                header.style.textAlign = 'left';
+                photo.style.marginRight = '30px';
+                photo.style.marginBottom = '0';
+                
+                document.body.style.fontSize = '16px';
+                h1.style.fontSize = '32px';
+            }
+        }
+        
+        // Écouter les changements de taille
+        window.addEventListener('resize', adjustLayout);
+        
+        // Appliquer les styles au chargement
+        window.addEventListener('load', adjustLayout);
+    }
+    
+    // Appeler la fonction
+    makeCVResponsive();
+</script>
+<body>
+    <div class="container">
+        <header>
+            <!-- Remplacez "photo.jpg" par le chemin de votre photo -->
+            <img src="WhatsApp Image 2025-05-19 à 17.49.32_72283142.jpg" alt="Photo de profil" class="photo">
+            <div class="header-text">
+                <h1>Mbella Eloka R.</h1>
+                <p class="title">Développeur Web </p>
+                <p class="contact-info">
+                    email: stillreachourobjectives@example.com<br>
+                    téléphone: +237 658 65 36 98<br>
+                    adresse: Avenue Omnisport, Douala
+                </p>
+            </div>
+        </header>
+        
+        <section>
+            <h2>Profil Professionnel</h2>
+            <p>Développeur web passionné avec 3 ans d'expérience dans la création de sites web et applications. Spécialisé en JavaScript, React et Node.js. Autonome, rigoureux et toujours à la recherche de nouvelles technologies à maîtriser. Excellentes compétences en travail d'équipe et résolution de problèmes.</p>
+        </section>
+        
+        <section>
+            <h2>Expérience Professionnelle</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Développeur Front-End junior</span>
+                    <span class="item-date">2022 - Présent</span>
+                </div>
+                <div class="item-subtitle">WebTech Solutions, Douala</div>
+                <ul>
+                    <li>Conception et développement d'applications web avec React et TypeScript</li>
+                    <li>Encadrement d'une équipe de 3 développeurs juniors</li>
+                    <li>Optimisation des performances (réduction du temps de chargement de 40%)</li>
+                    <li>Intégration avec des APIs REST et GraphQL</li>
+                </ul>
+            </div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Développeur Web </span>
+                    <span class="item-date">2020 - 2022</span>
+                </div>
+                <div class="item-subtitle">Digital Agency, Yaoundé</div>
+                <ul>
+                    <li>Développement de sites web sur mesure pour 15+ clients</li>
+                    <li>Création d'une application interne de gestion de projets</li>
+                    <li>Mise en place de tests automatisés (Jest, Cypress)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Formation</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Local Host Academy</span>
+                    <span class="item-date">2018 - 2020</span>
+                </div>
+                <div class="item-subtitle">Diplôme en Développement Web Full

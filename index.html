@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texte sur image</title>
+    <style>
+        /* Style de base */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #13aff7;
+        }
+        
+        /* Conteneur principal */
+        .image-texte {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* L'image */
+        .image-texte img {
+            width: 100%;
+            display: block;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Texte superposé */
+        .texte-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+            color: white;
+            padding: 20px;
+        }
+        
+        /* Titre */
+        .texte-overlay h2 {
+            margin: 0;
+            font-size: 28px;
+            color: rgb(241, 241, 245);
+        }
+        
+        /* Description */
+        .texte-overlay p {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+       header{
+        font-size: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top:20px;
+        background-color: rgb(240, 209, 130);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 30px;
+        } 
+        b{
+        margin-left: 550px;
+        }
+        .Bouton{
+            width: 30px;
+            padding-left:20px ;
+            display: flex;
+
+        }
+        button{
+           margin-left: 10px; 
+           border-radius: 15px;
+        }
+        .Bouton a{
+            font-family: calibri;
+            font-weight: 900;
+            color: rgb(10, 10, 10);
+            font-size: 16px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <b>PAGE D'ACCEUIL</b>
+        </div>
+        <div class="Bouton">
+        <button><a href="CV.html">Curriculum Vitae</a></button>
+        <button><a href="Mon Portfolio.html">Portfolio</a></button>
+        <button><a href="FORM.html">Formulaire</a></button>
+        </div>
+    </header>
+    <div class="image-texte">
+        <!-- Remplacez "votre-image.jpg" par le chemin de votre image -->
+        <img src="bridges-5239525_1280.jpg" alt="Description de l'image">
+        
+        <div class="texte-overlay">
+            <h2>PONT BLANC</h2>
+            <p>Comme vous le constatez, voici l'image d'un pont blanc</p>
+        </div>
+    </div>
+    
+</body>
+</html>
